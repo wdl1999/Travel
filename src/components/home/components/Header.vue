@@ -7,16 +7,20 @@
             <span class="iconfont input-icon">&#xe632;</span>
             输入城市/景点/游玩主题
         </div>
-        <div class="header-right">
-            深圳
+        <router-link to="/city" class="header-right" tag="div">
+            {{this.city}}
             <span class="iconfont arrow-icon">&#xe6aa;</span>
-        </div>
+        </router-link>
     </div>
 </template>
 
 <script>
+import {mapState} from 'Vuex'
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city'])
+  }
 }
 </script>
 

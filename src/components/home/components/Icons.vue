@@ -37,8 +37,6 @@ export default {
         }
         pages[page].push(item)
       })
-      console.log(this.iconList)
-      console.log(pages)
       return pages
     }
   }
